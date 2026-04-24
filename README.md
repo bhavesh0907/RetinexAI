@@ -1,34 +1,34 @@
-# RetinexAI
+# 🚀 RetinexAI
 
-**Automated Ophthalmic Disease Detection using Deep Learning**
+### Automated Ophthalmic Disease Detection using Deep Learning
 
----
-
-## Project Description
-
-RetinexAI is a full-stack AI system that performs automated retinal disease screening from fundus images. The system leverages convolutional neural networks to classify multiple ophthalmic conditions and provides explainable predictions, structured reports, and an administrative analytics dashboard.
-
-This project focuses on **model performance comparison, generalization behavior, and real-world system integration**, rather than only model training.
-
----
-
-## Problem Statement
-
-Manual retinal screening is:
-
-* Time-consuming
-* Dependent on expert availability
-* Prone to variability
-
-This system aims to:
-
-* Automate disease detection
-* Assist early diagnosis
-* Provide consistent predictions
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-Frontend-red)
+![React](https://img.shields.io/badge/React-Admin--Dashboard-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
+![Deep Learning](https://img.shields.io/badge/CNN-ResNet50-important)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
 ---
 
-## Diseases Detected
+## 📌 Overview
+
+RetinexAI is a full-stack AI system for automated retinal disease detection from fundus images. It integrates deep learning models with a scalable backend, interactive frontend, and database-driven analytics dashboard.
+
+---
+
+## 🎯 Objectives
+
+* Automate retinal disease screening
+* Compare CNN architectures (ResNet50, ResNet101, DenseNet121)
+* Improve generalization under class imbalance
+* Provide explainable AI outputs (Grad-CAM)
+* Build a deployable full-stack system
+
+---
+
+## 🧠 Diseases Detected
 
 * Diabetic Retinopathy
 * Cataract
@@ -37,13 +37,12 @@ This system aims to:
 
 ---
 
-## Models Used (Core Contribution)
+## 🤖 Models Used
 
-### 1. ResNet50 (Primary Model)
+### ResNet50 (Best Model)
 
 * Transfer learning (ImageNet pretrained)
 * Fine-tuned on retinal dataset
-* Best performing model
 
 **Performance:**
 
@@ -53,10 +52,10 @@ This system aims to:
 
 ---
 
-### 2. ResNet101
+### ResNet101
 
 * Deeper architecture
-* Higher capacity but slight overfitting
+* Slight overfitting observed
 
 **Performance:**
 
@@ -66,10 +65,10 @@ This system aims to:
 
 ---
 
-### 3. DenseNet121
+### DenseNet121
 
-* Dense connectivity for feature reuse
-* Better generalization but lower peak accuracy
+* Dense connectivity improves feature reuse
+* Better generalization but slightly lower accuracy
 
 **Performance:**
 
@@ -79,44 +78,62 @@ This system aims to:
 
 ---
 
-## Key Technical Insight
+## 🔬 Training Configuration (CRITICAL)
 
-Increasing model depth **did NOT improve performance**.
-ResNet50 achieved the best balance between:
+* Input Size: **224 × 224 × 3**
+* Batch Size: **32**
+* Epochs: **25–30**
+* Optimizer: **Adam**
+* Learning Rate: **0.0001**
+* Loss Function: **Categorical Crossentropy**
+* Activation: **Softmax**
+* Transfer Learning: Enabled
+
+### Regularization Techniques
+
+* Data Augmentation
+* Early Stopping
+* Dropout layers
+* Class balancing (weighted loss / augmentation)
+
+---
+
+## 📊 Evaluation Metrics
 
 * Accuracy
-* Stability
-* Generalization
+* Precision
+* Recall
+* F1-score
+* Confusion Matrix
+* Normalized Confusion Matrix
 
 ---
 
-## Explainability (Critical Feature)
+## 🧪 Key Observations
+
+* Diabetic Retinopathy → highest detection accuracy
+* Cataract → strong performance
+* Glaucoma → lowest recall (challenging class)
+* Model depth increase ≠ performance improvement
+
+---
+
+## 🧠 Explainability
 
 * Grad-CAM used for visualization
-* Highlights disease-relevant regions
-* Improves interpretability of predictions
+* Highlights disease-relevant retinal regions
+* Improves model interpretability
 
 ---
 
-## Tech Stack (Complete)
+## ⚙️ Tech Stack
 
 ### Machine Learning
 
-* Python
 * TensorFlow / Keras
 * OpenCV
 * NumPy, Pandas
 * Matplotlib
-
-### Deep Learning Concepts
-
-* Transfer Learning
-* Fine-Tuning
-* Class Imbalance Handling
-* Data Augmentation
-* Feature Extraction
-
----
 
 ### Backend
 
@@ -125,132 +142,116 @@ ResNet50 achieved the best balance between:
 * SQLAlchemy
 * Pydantic
 
----
-
 ### Frontend
 
 * Streamlit (User App)
 * React.js + Vite (Admin Dashboard)
-* Axios (API communication)
-
----
+* Axios
 
 ### Database
 
 * MySQL
-* Relational schema (users, patients, screenings, sessions)
 
----
+### Tools
 
-### Dev & Tools
-
-* Git & GitHub
-* VS Code
+* Git, GitHub
 * Postman
-* npm
+* VS Code
 
 ---
 
-## System Architecture
+## 🏗️ System Architecture
 
 ```text
 User → Streamlit UI → FastAPI Backend → CNN Model  
                                       ↓  
-                                 MySQL DB  
+                                 MySQL Database  
                                       ↓  
                            React Admin Dashboard
 ```
 
 ---
 
-## Functional Modules
+## 🔌 API Layer (Important)
 
-### 1. User Application
+### Core Endpoints
 
-* Login / Registration
-* Patient data input
-* Image upload
-* Real-time prediction
-* Confidence score display
-* Grad-CAM visualization
-* Report generation
+* `/predict` → image inference
+* `/login` → authentication
+* `/register` → user creation
+* `/patients` → patient data
+* `/reports` → report generation
 
 ---
 
-### 2. Backend Services
+## 🔄 Workflow
 
-* Authentication APIs
-* Screening APIs
-* Model inference pipeline
-* Report generation logic
-* Database integration
-
----
-
-### 3. Admin Dashboard
-
-* Patient management
-* Screening records
-* Analytics & charts
-* User management
-* Session tracking
+1. User registers / logs in
+2. Uploads retinal image
+3. Backend processes image
+4. Model generates prediction
+5. Confidence score computed
+6. Grad-CAM visualization generated
+7. Report created (PDF)
+8. Data stored in database
+9. Admin monitors via dashboard
 
 ---
 
-## ML Pipeline
+## 🧪 ML Pipeline
 
-1. Image Preprocessing
-
-   * Resize
-   * Normalization
-
-2. Model Input
-
-   * Tensor conversion
-
-3. Prediction
-
-   * Softmax classification
-
-4. Post-processing
-
-   * Confidence scoring
-   * Risk categorization
-
-5. Explainability
-
-   * Grad-CAM heatmap
-
-6. Output
-
-   * UI display + Report
+1. Image preprocessing (resize, normalization)
+2. CNN inference
+3. Softmax classification
+4. Confidence scoring
+5. Grad-CAM visualization
+6. Output generation
 
 ---
 
-## Dataset
+## 📸 Screenshots
 
-* Retinal fundus image dataset
-* Multi-class classification
-
-⚠️ Not included in repo (size constraint)
-
-(Add dataset link here)
+(Add your images in `/assets`)
 
 ---
 
-## Model Weights
+## 📂 Project Structure
 
-(Add Drive link here)
-
-Place inside:
-
-```bash
-models/
+```text
+AI-RetinoCare/
+├── backend/
+├── admin-frontend/
+├── app.py
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## Installation
+## 📦 Dataset
+
+👉 https://www.kaggle.com/datasets/gunavenkatdoddi/eye-diseases-classification
+
+* Multi-class retinal dataset
+* Classes: DR, Cataract, Glaucoma, Normal
+
+### Preprocessing
+
+* Resizing
+* Normalization
+* Augmentation (flip, rotate, zoom, brightness)
+
+⚠️ Not included in repo
+
+---
+
+## 📦 Model Weights
+
+(Add Drive link)
+
+---
+
+## ⚡ Installation
 
 ```bash
 git clone https://github.com/bhavesh0907/RetinexAI.git
@@ -259,7 +260,7 @@ cd RetinexAI
 
 ---
 
-## Setup Environment
+## 🔧 Setup
 
 ```bash
 python -m venv venv
@@ -270,7 +271,7 @@ pip install -r backend/requirements.txt
 
 ---
 
-## Run Backend
+## ▶️ Run Backend
 
 ```bash
 cd backend
@@ -279,7 +280,7 @@ uvicorn app.backend_main:app --reload
 
 ---
 
-## Run Frontend (User App)
+## ▶️ Run Frontend
 
 ```bash
 streamlit run app.py
@@ -287,7 +288,7 @@ streamlit run app.py
 
 ---
 
-## Run Admin Dashboard
+## ▶️ Run Admin Dashboard
 
 ```bash
 cd admin-frontend
@@ -297,70 +298,40 @@ npm run dev
 
 ---
 
-## Database Setup
+## 🗄️ Database Setup
 
 ```sql
 CREATE DATABASE retinex_ai;
 ```
 
-Update config in backend.
+---
+
+## ⚠️ Limitations
+
+* Dataset size limitations
+* Glaucoma detection difficulty
+* No clinical validation
 
 ---
 
-## Results Summary
-
-| Metric         | Best Model  |
-| -------------- | ----------- |
-| Accuracy       | ResNet50    |
-| Generalization | DenseNet121 |
-| Stability      | ResNet50    |
-
----
-
-## Observations
-
-* Diabetic Retinopathy → easiest to detect
-* Cataract → high accuracy
-* Glaucoma → hardest (low recall)
-* Normal → moderate confusion
-
----
-
-## Limitations
-
-* Limited dataset size
-* Glaucoma detection complexity
-* No clinical deployment validation
-
----
-
-## Future Enhancements
+## 🚀 Future Work
 
 * Vision Transformers
 * Ensemble learning
 * Larger dataset
 * Cloud deployment
-* Real-time hospital integration
 
 ---
 
-## Contributors
+## 👨‍💻 Contributors
 
 * Bhavesh Mishra
 * Yugam Shah
 
 ---
 
-## Important Notes
+## 🏁 Conclusion
 
-* Do NOT upload datasets/models
-* Use external storage (Drive/Kaggle)
-* Use requirements.txt for setup
-
----
-
-## Conclusion
-
-RetinexAI demonstrates that optimized CNN architectures combined with proper system design can deliver reliable and scalable solutions for automated retinal disease detection.
+RetinexAI demonstrates a complete AI-driven healthcare pipeline combining deep learning with scalable system design.
 
 ---
