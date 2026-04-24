@@ -1,0 +1,37 @@
+class_names:
+  - cataract
+  - diabetic_retinopathy
+  - glaucoma
+  - normal
+
+num_classes: 4
+
+data:
+  img_size: 224
+  batch_size: 16
+  manifest_train: "data/manifests/train.csv"
+  manifest_val: "data/manifests/val.csv"
+  manifest_test: "data/manifests/test.csv"
+
+optimizer:
+  lr: 0.0001
+  weight_decay: 0.0
+
+loss:
+  type: "class_balanced_focal"
+  beta: 0.9999
+  gamma: 2.0
+
+training:
+  freeze_backbone_epochs: 2
+  total_epochs: 30
+  early_stopping_patience: 5
+
+monitoring:
+  tensorboard_logdir: "logs/"
+
+export:
+  save_dir: "models/"
+  filename: "best_model.keras"
+
+backbone: "resnet50"

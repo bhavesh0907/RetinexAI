@@ -1,0 +1,92 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# =========================
+# Virtual Environments (CRITICAL)
+# =========================
+venv/
+env/
+ENV/
+.venv/
+.env
+tfenv/
+backend/tfenv/
+
+# =========================
+# OS / System Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Data / Datasets (DO NOT PUSH)
+# =========================
+data/
+datasets/
+retina_dataset/
+
+# =========================
+# Models / Weights (DO NOT PUSH)
+# =========================
+models/
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.pkl
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Reports / Generated Files
+# =========================
+backend/reports/
+reports/
+*.pdf
+
+# =========================
+# Notebooks / Experiments
+# =========================
+notebooks/
+experiments/
+
+# =========================
+# Frontend Build
+# =========================
+node_modules/
+dist/
+build/
+
+# =========================
+# Streamlit
+# =========================
+.streamlit/
+
+# =========================
+# Database / Dumps
+# =========================
+*.sql
+*.db
+
+# =========================
+# Archives / Misc
+# =========================
+*.zip
+*.tar
+*.gz
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
