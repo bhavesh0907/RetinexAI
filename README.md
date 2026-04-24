@@ -14,7 +14,9 @@
 
 ## 📌 Overview
 
-RetinexAI is a full-stack AI system for automated retinal disease detection from fundus images. It integrates deep learning models with a scalable backend, interactive frontend, and database-driven analytics dashboard.
+RetinexAI is an end-to-end AI system for automated retinal disease screening using deep learning. It enables users to upload retinal fundus images and receive instant predictions along with confidence scores and visual explanations. 
+
+The system integrates a CNN-based model with a full-stack architecture, combining a user interface, backend API, database, and admin dashboard. It is designed to simulate a real-world deployment scenario rather than a standalone machine learning experiment.
 
 ---
 
@@ -332,6 +334,12 @@ CREATE DATABASE retinex_ai;
 
 ## 🏁 Conclusion
 
-RetinexAI demonstrates a complete AI-driven healthcare pipeline combining deep learning with scalable system design.
+RetinexAI proves that deep learning models can be effectively integrated into a full-stack system for practical healthcare applications. The system achieves reliable multi-class classification while maintaining interpretability through Grad-CAM visualizations.
+
+Among the evaluated models, ResNet50 delivered the best performance by balancing accuracy and generalization, outperforming deeper architectures in real-world testing conditions.
+
+The project highlights that system design, integration, and usability are as critical as model performance. By combining machine learning with backend services, frontend interfaces, and data management, RetinexAI moves beyond experimentation toward a deployable solution.
+
+While the system performs well, limitations such as dataset size and lack of clinical validation remain. These constraints define the next phase of improvement and optimization.
 
 ---
