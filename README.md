@@ -247,7 +247,7 @@ AI-RetinoCare/
 
 ## 📦 Model Weights
 
-[(Add Drive link)](https://drive.google.com/file/d/1h7B6wTA5ptoCNq6PUtQJp7ZtidYmUqZp/view?usp=share_link)
+👉 https://drive.google.com/file/d/1h7B6wTA5ptoCNq6PUtQJp7ZtidYmUqZp/view?usp=share_link
 
 ---
 
