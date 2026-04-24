@@ -348,8 +348,6 @@ Update config in backend.
 
 * Bhavesh Mishra
 * Yugam Shah
-* Akshat Mittal
-* Ritvik Rajvanshi
 
 ---
 
