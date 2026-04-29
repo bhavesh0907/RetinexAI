@@ -213,7 +213,30 @@ User → Streamlit UI → FastAPI Backend → CNN Model
 
 ## 📸 Screenshots
 
-(Add your images in `/assets`)
+### 🔐 Authentication & Registration
+<p align="center">
+  <img src="assets/login-screen.png" width="30%" />
+  <img src="assets/patient-registration.png" width="30%" />
+</p>
+
+### 🧠 AI Screening Pipeline
+<p align="center">
+  <img src="assets/image-upload-model-attention.png" width="30%" />
+  <img src="assets/ai-based-lesion-highlighting.png" width="30%" />
+  <img src="assets/ai-screening-report.png" width="30%" />
+</p>
+
+### 📊 Records & Tracking
+<p align="center">
+  <img src="assets/patient-record.png" width="30%" />
+  <img src="assets/detailed-screening-record.png" width="30%" />
+  <img src="assets/session-tracking.png" width="30%" />
+</p>
+
+### ⚙️ Admin Panel
+<p align="center">
+  <img src="assets/admin-dashboard.png" width="40%" />
+</p>
 
 ---
 
